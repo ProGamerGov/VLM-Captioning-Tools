@@ -1,0 +1,10 @@
+torch
+pandas
+pillow
+transformers
+pyarrow
+tqdm
+xformers
+protobuf
+bitsandbytes
+accelerate
