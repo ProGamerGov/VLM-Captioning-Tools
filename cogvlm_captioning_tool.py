@@ -28,9 +28,9 @@ class LRSCalculationWorker:
     """
 
     def __init__(self) -> None:
-        from numba import jit
+        # from numba import jit
 
-        @jit(nopython=True, cache=True) # Remove if not using numba JIT
+        # @jit(nopython=True, cache=True) # Remove if not using numba JIT
         def lrs(s1, i, j, dp):
             """
             Compute the Longest Repeating Subsequence (LRS) of a given string.
