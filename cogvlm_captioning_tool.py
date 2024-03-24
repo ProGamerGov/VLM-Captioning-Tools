@@ -1,5 +1,4 @@
 import torch
-import requests
 import pandas as pd
 from PIL import Image, ImageFile
 from transformers import AutoModelForCausalLM, LlamaTokenizer
