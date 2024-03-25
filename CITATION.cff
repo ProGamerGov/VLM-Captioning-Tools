@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Egan"
+  given-names: "Ben"
+- family-names: "Redden"
+  given-names: "Alex"
+title: "VLM Captioning Tools"
+version: 1.0.0
+date-released: 2024-03-24
+url: "https://github.com/ProGamerGov/VLM-Captioning-Tools"
+keywords:
+  - "VLM"
+  - "CogVLM"
+  - "Dolphin 2.6 Mistral 7b - DPO"
+  - "image captioning"
+  - "research"
+license: MIT
