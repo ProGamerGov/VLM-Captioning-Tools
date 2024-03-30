@@ -235,7 +235,6 @@ def run_model(model, tokenizer, df, images_list, backup_dir, query_prompt, backu
             'images': [[inputs['images'][0].to(device).to(torch.bfloat16)]],
         }
         gen_kwargs = {"max_length": 2048, "do_sample": False}
-        gen_kwargs = generate_random_gen_kwargs()
 
         max_attempts = 5 if failure_threshold else 0
         count = 0
