@@ -178,9 +178,7 @@ def load_images_and_parquet(path_and_save_dir, parquet_name="output.parquet", al
     if parquet_exists:
         if verbose:
             print("Found existing parquet")
-            print("Found", len(images_list), "images before duplicate removal")
-        if verbose:
-            print("Found", len(images_list), "images after duplicate removal")
+            print("Found", len(images_list), "images in provided directories and txt files")
         if verbose:
             column_length = len(df['image_name'])
             print("Already processed", column_length, "images")
