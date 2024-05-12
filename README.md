@@ -64,7 +64,7 @@ python dolphin_mistral_short_captioning_tool.py
 
 ## Bad Caption Finder Tool
 
-This script provides the ability to determine the number of caption failures in a dataset due to greedy search induced failures. It is capable of detecting repeating characters, words, sentences, and more and thus is extremely robust.
+This script provides the ability to determine the number of caption failures in a dataset due to greedy search induced failures. It is capable of detecting repeating characters, words, sentences, and more and thus is extremely robust. The same failed caption detection code is used in the CogVLM Captioning Tool script above to automatically detect and retry failed captions.
 
 **Usage:**
 
