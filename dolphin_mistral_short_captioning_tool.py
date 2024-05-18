@@ -106,7 +106,7 @@ model = AutoModelForCausalLM.from_pretrained(
 ite = 0
 for index, row in tqdm(df.iterrows(), total=len(df.values.tolist())):
     if pd.isna(row['short_caption']) or row['short_caption'] in ['No content found', '', ' ']:
-        if pd.notna(row['long_caption']):
+        if pd.notna(row['long_caption']) and row['long_caption'] != '':
             short_caption = generate_short_caption(row['long_caption'], model, tokenizer)
             df.at[index, 'short_caption'] = short_caption
             ite += 1
