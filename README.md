@@ -61,7 +61,7 @@ Generated captions are saved in a parquet file with the following structure: `['
 First adjust the `batch_size` and `path_and_save_dir` parameter's input directories and backup directory in the script to your liking. Then run it like this:
 
 ```
-python moondream_batch_captioning_tool.py.py
+python moondream_batch_captioning_tool.py
 ```
 
 ## Dolphin Caption Summarization Tool
