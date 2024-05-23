@@ -76,6 +76,18 @@ First adjust the input parquet and output parquet parameters in the script to yo
 python dolphin_mistral_short_captioning_tool.py
 ```
 
+## Meta Llama 3 Caption Summarization Tool
+
+This script uses the [Meta Llama 3 8B Instruct](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct) LLM model to create a shortened version of the `long_caption` value for every item in the provided parquet's `short_caption` column. 
+
+**Usage:**
+
+First adjust the input parquet and output parquet parameters in the script to your liking. Then run it like this:
+
+```
+python meta_llama3_short_captioning_tool.py
+```
+
 
 ## Bad Caption Finder Tool
 
