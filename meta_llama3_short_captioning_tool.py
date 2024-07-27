@@ -95,7 +95,7 @@ print("Number of missing short captions:", num_missing_short_captions)
 # Load tokenizer and model
 tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3.1-8B-Instruct')
 model = AutoModelForCausalLM.from_pretrained(
-    'meta-llama/Meta-Llama-3-8B-Instruct',
+    'meta-llama/Meta-Llama-3.1-8B-Instruct',
     torch_dtype=torch.bfloat16,
     low_cpu_mem_usage=True,
     load_in_4bit=True,
