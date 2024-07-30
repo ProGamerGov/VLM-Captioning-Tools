@@ -80,7 +80,8 @@ def generate_short_caption(caption, model, tokenizer):
 # Load Parquet file with long captions and empty short captions
 input_parquet_filename = "captions.parquet"
 output_filename = "captions_with_short_captions.parquet"
-model_repo = "meta-llama/Meta-Llama-3.1-8B-Instruct"
+# Llama 3 models: "meta-llama/Meta-Llama-3-8B-Instruct", "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_repo = 'failspy/Meta-Llama-3-8B-Instruct-abliterated-v3'
 hf_auth = "<auth_token>"
 
 
