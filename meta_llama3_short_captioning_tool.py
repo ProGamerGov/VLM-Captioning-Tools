@@ -83,6 +83,7 @@ output_filename = "captions_with_short_captions.parquet"
 # Llama 3 models: "meta-llama/Meta-Llama-3-8B-Instruct", "meta-llama/Meta-Llama-3.1-8B-Instruct"
 model_repo = 'failspy/Meta-Llama-3-8B-Instruct-abliterated-v3'
 hf_auth = "<auth_token>"
+hf_auth = None if hf_token == "<auth_token>" else hf_auth
 
 
 if os.path.exists(output_filename):
