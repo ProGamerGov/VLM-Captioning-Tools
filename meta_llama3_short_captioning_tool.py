@@ -95,7 +95,7 @@ print("Number of missing short captions:", num_missing_short_captions)
 
 
 # Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained(model_repo, token=hf_auth)
+tokenizer = AutoTokenizer.from_pretrained(model_repo, token=hf_auth, padding_side="left")
 model = AutoModelForCausalLM.from_pretrained(
     model_repo,
     torch_dtype=torch.bfloat16,
