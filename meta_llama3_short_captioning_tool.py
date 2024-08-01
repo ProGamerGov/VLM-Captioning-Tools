@@ -80,6 +80,11 @@ def generate_short_caption(caption, model, tokenizer):
 # Load Parquet file with long captions and empty short captions
 input_parquet_filename = "captions.parquet"
 output_filename = "captions_with_short_captions.parquet"
+# Llama 3 models: "meta-llama/Meta-Llama-3-8B-Instruct", "meta-llama/Meta-Llama-3.1-8B-Instruct"
+model_repo = 'failspy/Meta-Llama-3-8B-Instruct-abliterated-v3'
+# Optional HuggingFace Token for gated repos
+hf_auth = "<auth_token>"
+hf_auth = None if hf_token == "<auth_token>" else hf_auth
 
 
 if os.path.exists(output_filename):
@@ -92,13 +97,14 @@ print("Number of missing short captions:", num_missing_short_captions)
 
 
 # Load tokenizer and model
-tokenizer = AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct')
+tokenizer = AutoTokenizer.from_pretrained(model_repo, token=hf_auth, padding_side="left")
 model = AutoModelForCausalLM.from_pretrained(
-    'meta-llama/Meta-Llama-3-8B-Instruct',
+    model_repo,
     torch_dtype=torch.bfloat16,
     low_cpu_mem_usage=True,
     load_in_4bit=True,
-    trust_remote_code=True
+    trust_remote_code=True,
+    token=hf_auth
 ).eval()
 
 
