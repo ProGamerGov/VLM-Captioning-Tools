@@ -132,7 +132,7 @@ def generate_random_gen_kwargs():
     }
 
 
-def load_images_and_parquet(path_and_save_dir, parquet_name="output.parquet", allowed_extensions=['.jpg', '.jpeg', '.png'], verbose=True):
+def load_images_and_parquet(path_and_save_dir, parquet_name="output.parquet", allowed_extensions=['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'], verbose=True):
     """
     Load images from specified paths and create or append to a parquet file.
 
